@@ -1,0 +1,512 @@
+/* CIRCLES */
+
+.map-In-Circles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blue-Circle {
+    border: 2px solid var(--circles-border-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 680px;
+    height: 680px;
+}
+
+.red-Circle {
+    border: 3px dashed var(--inner-circle-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 575px;
+    height: 575px;
+}
+
+.travel-Icons {
+    display: grid;
+    width: 770px;
+    height: 750px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    z-index: 1;
+}
+
+.travel-Icons-Item {
+    display: flex;
+}
+
+.travel-Icons-Item:first-child {
+    align-items: center;
+}
+
+.travel-Icons-Item:nth-child(2) {
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.travel-Icons-Item:last-child {
+    padding: 70px 0px 125px 50px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.item-In-Circle {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+}
+
+.rotated-Circle {
+    transform:rotate(360deg); 
+    -webkit-transform:rotate(360deg); 
+    -moz-transform:rotate(360deg); 
+    -o-transform:rotate(360deg); 
+}
+
+.item-In-Circle i {
+    font-size: 55px;
+    color: #fff;
+}
+
+.item-In-Circle i.fa-exchange-alt {
+    font-size: 100px;
+    color: #fff;
+}
+
+.item-In-Circle i.fa-suitcase-rolling {
+    font-size: 75px;
+    color: #fff;
+}
+
+.item-In-Circle i.fa-camera {
+    font-size: 80px;
+    color: #fff;
+}
+
+.item-In-Circle i.fa-train, .item-In-Circle i.fa-laptop {
+    font-size: 70px;
+    color: #fff;
+}
+
+.arrows {
+    background-color: var(--accent-font-color);
+    width: 150px;
+    height: 150px;
+    font-size: 100px;
+}
+
+.laptop {
+    background-color: #157eab;
+}
+
+.suitecase {
+    background-color: #528945;
+}
+
+.camera {
+    background-color: #fcb333;
+}
+
+.train {
+    background-color: #503270;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 110px;
+    height: 110px;
+}
+
+@media only screen and (min-width: 998px) and (max-width: 1350px) {
+    .circles-And-Plane {
+        padding-top: 30px !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:997px) {
+    .blue-Circle {
+        width: 500px !important;
+        height: 500px !important;
+    }
+    
+    .travel-Icons {
+        width: 540px;
+        height: 540px;
+    }
+    
+    .market-Icons {
+        width: 530px !important;
+        height: 530px !important;
+    }
+
+    .red-Circle {
+        width: 410px !important;
+        height: 410px !important;
+    }
+
+    .item-In-Circle {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .red-Circle img {
+        width: 190px;
+        height: 190px;
+    }
+
+    i.fa-exchange-alt {
+        font-size: 70px !important;
+    }
+
+    i.fa-laptop, i.fa-train {
+        font-size: 55px !important;
+    }
+    
+    i.fa-suitcase-rolling {
+        font-size: 58px !important;
+    }
+    
+    i.fa-camera {
+        font-size: 60px !important;
+    }
+    
+    .earth-And-Plane {
+        width: 215px !important;
+        height: auto !important;
+        position: absolute;
+        z-index: 100;
+    }
+
+    .market-Icon-Chartline-Wrapper {
+        padding-left: 80px !important;
+    }
+    
+    .building {
+        width: 130px !important;
+        height: 130px !important;
+    }
+    
+    .chartline {
+        width: 105px !important;
+        height: 105px !important;
+    }
+    
+    .fa-chart-line {
+        font-size: 50px !important;
+    }
+    
+    .fa-landmark {
+        font-size: 58px !important;
+    }
+
+    .red-Dashed-Circle {
+        width: 380px !important;
+        height: 380px !important;
+    }
+
+    .blue-Solid-Circle {
+        width:310px !important;
+        height: 310px !important; 
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:767px) {
+    .blue-Circle {
+        width: 400px !important;
+        height: 400px !important;
+    }
+    
+    .travel-Icons {
+        width: 450px;
+        height: 450px;
+    }
+    
+    .market-Icons {
+        width: 430px !important;
+        height: 430px !important;
+    }
+
+    .red-Circle {
+        width: 340px !important;
+        height: 340px !important;
+    }
+
+    .item-In-Circle {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .red-Circle img {
+        width: 170px;
+        height: 170px;        
+    }
+
+    i.fa-exchange-alt {
+        font-size: 60px !important;
+    }
+
+    i.fa-laptop, i.fa-train {
+        font-size: 45px !important;
+    }
+    
+    i.fa-suitcase-rolling {
+        font-size: 48px !important;
+    }
+    
+    i.fa-camera {
+        font-size: 50px !important;
+    }
+
+    .building {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .fa-chart-line {
+        font-size: 48px !important;
+    }
+
+    .earth-And-Plane {
+        width: 200px !important;
+        height: auto !important;
+        position: absolute;
+        z-index: 100;
+    }
+}
+
+@media only screen and (max-width:600px) and (min-width:320px) {
+    .blue-Circle {
+        width: 330px;
+        height: 330px;
+    }
+    
+    .travel-Icons {
+        width: 370px;
+        height: 370px;
+    }
+    
+    .red-Circle {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .item-In-Circle {
+        width: 70px;
+        height: 70px
+    }
+    
+    .red-Circle img {
+        width: 150px;
+        height: 150px;
+        
+    }
+
+    .travel-Icons-Item:last-child {
+        padding: 45px 20px 70px 50px !important;
+    }
+
+    .train {
+        margin: 0 !important;
+    }
+
+    i.fa-exchange-alt {
+        font-size: 50px !important;
+    }
+
+    i.fa-laptop, i.fa-train {
+        font-size: 35px !important;
+    }
+    
+    i.fa-suitcase-rolling {
+        font-size: 37px !important;
+    }
+    
+    i.fa-camera {
+        font-size: 40px !important;
+    }
+
+    .building {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .market-Icons {
+        width: 330px !important;
+        height: 330px !important;
+    }
+
+    .fa-chart-line {
+        font-size: 45px !important;
+    }
+
+    .earth-And-Plane {
+        width: 175px !important;
+        height: auto !important;
+        position: absolute;
+        z-index:100;
+    }
+
+    .market-Icon-Chartline-Wrapper {
+        padding-left: 120px !important;
+    }
+
+    .circles-And-Plane {
+        padding: 15px 0px !important;
+    }
+
+    .red-Dashed-Circle {
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    .blue-Solid-Circle {
+        width:280px !important;
+        height: 280px !important; 
+    }
+
+    @media (max-width:350px) {
+        .blue-Circle {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .travel-Icons {
+            width: 320px;
+            height: 320px;
+        }
+        
+        .red-Circle {
+            width: 230px;
+            height: 230px;
+        }
+
+        .market-Icons {
+            width: 300px !important;
+            height: 300px !important;
+        }
+
+        .travel-Icons-Item:last-child {
+            padding: 45px 10px 70px 60px !important;
+        }
+
+        .building {
+            width: 80px !important;
+            height: 80px !important;
+        }
+
+        .fa-chart-line {
+            font-size: 42px !important;
+        }
+
+        .fa-landmark {
+            font-size: 45px !important;
+        }
+
+        .market-Icon-Chartline-Wrapper {
+            padding-left: 100px !important;
+        }
+
+        .red-Dashed-Circle {
+            width: 310px !important;
+            height: 310px !important;
+        }
+
+        .blue-Solid-Circle {
+            width: 265px !important;
+            height: 265px !important;
+        }
+    }
+}
+
+/* END OF CIRCLES */
+
+/* START OF CHAPTER CIRCLES */
+
+.circles-And-Plane {
+    padding: 90px 20px 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.market-Icons {
+    display: grid;
+    width: 700px;
+    height: 680px;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.market-Icons-Item {
+    display: flex;
+    z-index: 1;
+}
+
+.earth-And-Plane {
+    position: absolute;
+    z-index:100;
+}
+
+.market-Icons-Item:first-child {
+    padding-top: 25px;
+    justify-content: center;
+}
+
+.market-Icon-Chartline-Wrapper {
+    padding-left: 115px;
+}
+
+.market-Icons-Item:last-child {
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 74px;
+    padding-left: 50px;
+}
+
+.building {
+    width: 165px;
+    height: 165px;
+    background-color: var(--chapterTheme-font);
+}
+
+.chartline {
+    background-color: #105f80;
+}
+
+/* END OF CHAPTER CIRCLES */
+
+/* TOPIC CIRCLES */
+
+.blue-Solid-Circle {
+    width: 355px;
+    height: 355px;
+    border-radius: 50%;
+    border: 1px solid var(--circles-border-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-Dashed-Circle {
+    width: 405px;
+    height: 405px;
+    border-radius: 50%;
+    border: 3px dashed var(--inner-circle-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* END OF TOPIC CIRCLES */

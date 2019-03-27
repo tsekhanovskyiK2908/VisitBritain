@@ -1,0 +1,16 @@
+﻿@model Lab3.Models.Slide
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ 
+    var classNameOfDiv = (Model.Name == "Overview" || Model.Name == "Chapter 1: Inbound market statistics" || Model.Name == "Chapter 1.1: Key statistics") ? "slide-Block overview-Slide-Color" : (Model.Name=="Content") ? "slide-Block content-Slide" : "slide-Block";
+    var classNameofSpan = (Model.Name == "Content") ? "slide-Title slide-Title-Content" : "slide-Title";
+}
+
+<div class="@classNameOfDiv">
+    <span class="@classNameofSpan">@Model.Name</span>
+    @RenderBody()
+</div>

@@ -1,0 +1,110 @@
+.start-Of-Chapter-Slide {
+    background-color: var(--header-color);
+    display: flex;
+    margin-top: 55px;
+    padding-left: 45px;
+    justify-content: space-between;
+}
+
+.chapter-Start-Number-Font {
+    color: #fff;
+    font-size: 34pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chapter-Theme-Font {
+    color: var(--chapterTheme-font);
+    font-size: 50pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chapter-Number-And-Theme {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 35px;
+}
+
+.chapter-Number-And-Theme-Wrapper {
+    padding-bottom: 30px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1350px) {
+    .start-Of-Chapter-Slide {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p.chapter-Theme-Font {
+        text-align: center;
+    }
+
+    .chapter-Number-And-Theme {
+        padding-left: 0px !important;
+    }
+
+    .chapter-Number-And-Theme-Wrapper {
+        text-align: center;
+        padding: 0px !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:997px) {
+    .start-Of-Chapter-Slide {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chapter-Number-And-Theme {
+        padding: 0px !important;
+    }
+
+    .chapter-Number-And-Theme-Wrapper {
+        text-align: center;
+        padding: 0px !important;
+    }
+    
+    p.chapter-Theme-Font {
+        text-align: center;
+    }
+
+    .chapter-Theme-Font {
+        font-size: 44px;
+    }
+
+    .chapter-Start-Number-Font {
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+
+    .start-Of-Chapter-Slide {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chapter-Number-And-Theme {
+        padding: 0px !important;
+    }
+
+    .chapter-Number-And-Theme-Wrapper {
+        text-align: center;
+        padding: 0px !important;
+    }
+
+    p.chapter-Theme-Font {
+        text-align: center;
+    }
+
+    .chapter-Theme-Font {
+        font-size: 40px;
+    }
+
+    .chapter-Start-Number-Font {
+        font-size: 36px;
+    }
+}

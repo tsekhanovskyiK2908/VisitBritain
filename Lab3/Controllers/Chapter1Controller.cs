@@ -7,82 +7,28 @@ using System.Web.Mvc;
 
 namespace Lab3.Controllers
 {
-    public class HomeController : Controller
+    public class Chapter1Controller : Controller
     {
+        // GET: Chapter
         public ActionResult Index()
         {
             var slide = new Slide
-            {   
-                Name = "VisitBritain",
-                Links = new List<Link>
-                {
-                    new Link()
-                    {
-                        LinkText = "Go to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Go to overview",
-                        ActionName = "Overview",
-                        ControllerName = "Home"
-                    }
-
-                }
-            };
-
-            return View(slide);
-        }
-
-        public ActionResult Overview()
-        {
-            var slide = new Slide
             {
-                Number = 2,
-                Name = "Overview",
+                Number = 4,
+                Name = "Chapter 1",
                 Links = new List<Link>
                 {
                     new Link()
                     {
-                        LinkText = "Back to main",
-                        ActionName = "Index",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Go to content",
+                        LinkText = "Back to content",
                         ActionName = "Content",
                         ControllerName = "Home"
-                    }
-
-                }
-            };
-
-            return View(slide);
-        }
-
-        public ActionResult Content()
-        {
-            var slide = new Slide
-            {   
-                Number = 3,
-                Name = "Content",
-                Links = new List<Link>
-                {
-                    new Link()
-                    {
-                        LinkText = "Go to overview",
-                        ActionName = "Overview",
-                        ControllerName = "Home"
                     },
 
                     new Link()
                     {
-                        LinkText = "Start the first chapter",
-                        ActionName = "Index",
+                        LinkText = "Next slide",
+                        ActionName = "InboundMarketStatistics",
                         ControllerName = "Chapter1"
                     }
 
@@ -92,18 +38,75 @@ namespace Lab3.Controllers
             return View(slide);
         }
 
-        public ActionResult About()
+        public ActionResult InboundMarketStatistics()
         {
-            ViewBag.Message = "Your application description page.";
+            var slide = new Slide
+            {
+                Number = 5,
+                Name = "Chapter 1: Inbound market statistics",
+                Links = new List<Link>
+                {
+                    new Link()
+                    {
+                        LinkText = "Go back to previous topic",
+                        ActionName = "Index",
+                        ControllerName = "Chapter1"
+                    },
 
-            return View();
+                    new Link()
+                    {
+                        LinkText = "Back to content",
+                        ActionName = "Content",
+                        ControllerName = "Home"
+                    },
+
+                    new Link()
+                    {
+                        LinkText = "Next topic",
+                        ActionName = "KeyInsights1",
+                        ControllerName = "Chapter1"
+                    }
+
+                }
+            };
+
+            return View(slide);
         }
 
-        public ActionResult Contact()
+        public ActionResult KeyInsights1()
         {
-            ViewBag.Message = "Your contact page.";
+            var slide = new Slide
+            {
+                Number = 6,
+                Name = "Chapter 1.1: Key statistics",
+                Links = new List<Link>
+                {
+                    new Link()
+                    {
+                        LinkText = "Go back to previous topic",
+                        ActionName = "InboundMarketStatistics",
+                        ControllerName = "Chapter1"
+                    },
 
-            return View();
+                    new Link()
+                    {
+                        LinkText = "Back to content",
+                        ActionName = "Content",
+                        ControllerName = "Home"
+                    },
+
+                    new Link()
+                    {
+                        LinkText = "Next chapter",
+                        ActionName = "Index",
+                        ControllerName = "Chapter2"
+                    }
+
+                }
+            };
+
+            return View(slide);
         }
+
     }
 }

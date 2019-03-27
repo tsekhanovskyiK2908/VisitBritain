@@ -1,0 +1,279 @@
+/* INTRODUCTION */
+
+.introduction {
+    background-color: var(--header-color);
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 0;
+}
+
+.introduction-Title {
+    text-align: center;
+}
+
+.intro-Text-First {
+    color: var(--commonheaderfont-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11pt;
+}
+
+.intro-Text-Second {    
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 42pt;
+    color: var(--commonheaderfont-color);
+}
+
+.general-Input {
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    padding: 15px 25px;
+    text-align: center;
+    box-sizing: border-box;
+    color: var(--footer-font-color);
+}
+
+.general-Button {
+    background-color: var(--accent-font-color);
+    color: var(--commonheaderfont-color);
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    border: 1px solid var(--footer-font-color);
+    padding: 15px 25px;
+}
+
+.button-Go-To-Main {
+    background-color: var(--inner-circle-color);
+    width: 100%;
+    font-size: 18pt;
+    height: 70px;
+    border: 1px solid var(--accent-font-color);
+    color: var(--footer-font-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (min-width:978px) and (max-width:1400px) {
+    .theme-And-Traiangle-Wrapper {
+        position: initial !important;
+    }
+    
+    .country-And-Circles {
+        flex-direction: column !important;
+        padding: 0px !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:979px) {
+    .introduction {
+        padding: 45px 0;
+    }
+
+    .general-Input {
+        font-size: 12pt;
+        width: 150px;
+        height: 40px;
+        
+    }
+    
+    .general-Button {
+        font-size: 14pt;
+        width: 150px;
+        height: 40px;
+        padding: 0;
+    }
+
+    .theme-And-Traiangle-Wrapper {
+        position: initial !important;
+    }
+    
+    .theme-Of-Presentation {
+        padding: 10px 15px !important;
+        margin-top: 20px !important;
+        font-size: 28px !important;
+    }
+
+    .country-And-Circles {
+        flex-direction: column !important;
+        padding: 0px !important;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    
+    .introduction {
+        padding: 35px 0;
+        height: auto;
+    }
+    
+    .intro-Text-First {
+        font-size: 12px;
+    }
+
+    .intro-Text-Second {
+        font-size: 34px;
+    }
+    
+    .introduction-Title img {
+        width: 150px;
+        height: 150px;
+    }
+    
+     .inputs-Group {
+        padding: 5px 0;
+        display: grid;
+        grid-template-rows: repeat(4,1fr) !important;
+        grid-template-columns: none !important;
+        grid-row-gap: 5px; 
+        align-items: center;
+    }
+    
+    .button-Go-To-Main {
+        font-size: 18px;
+        height: 45px;     
+    }
+
+    .general-Input {
+        font-size: 12pt;
+        width: 250px;
+        height: 40px;
+        
+    }
+    
+    .general-Button {
+        font-size: 14pt;
+        width: 250px;
+    }
+    
+    .theme-And-Traiangle-Wrapper {
+        position: initial !important;
+    }
+    
+    .theme-Of-Presentation {
+        padding: 10px 15px !important;
+        margin-top: 10px !important;
+        font-size: 25px !important;
+    }
+    
+    .slide-Block {
+        padding: 0px;
+        margin-top: 30px;
+    }    
+
+    .country-And-Circles {
+        flex-direction: column !important;
+        padding: 0px !important;
+    } 
+}
+
+@media (max-width:340px) {
+    .introduction {
+        padding: 25px 0;
+        height: auto;
+    }
+
+    .introduction-Title img {
+        width: 125px;
+        height: 125px;
+    }
+
+    
+}
+
+/*END OF INTRODUCTION */
+
+/* START OF FIRST SLIDE */
+.logo-Holder {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.presentation-Theme-Font {
+    /* font-size: 42pt; */
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flag-And-Text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-Font {
+    color: #0d4274;
+    font-size: 18pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.registered-Symbol-Font {
+    font-size: 12pt;
+    vertical-align: text-top;
+}
+
+.inputs-Group {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 5px;
+}
+
+.main-Slide-Wrapper {
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+}
+
+.theme-And-Traiangle-Wrapper {
+    position: absolute;
+    width: 100%;
+}
+
+.theme-Of-Presentation {
+    background-color: var(--header-color);
+    padding: 40px 60px;
+    margin-top: 40px;
+    font-size: 42pt;
+}
+
+.theme-Of-Presentation p {
+    margin: 0;
+}
+
+.under-Title-Triangle-Wrapper {
+    padding-left: 65px;
+}
+
+.under-Title-Triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 25px solid var(--header-color);
+}
+
+.country-And-Circles {
+    flex-direction: row !important;
+    justify-content: space-between;
+    position: relative;
+    /*! padding: 50px 0px 0px 60px; */
+}
+
+@media(max-width:767px) {
+    
+    
+}
+
+.country-Name {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

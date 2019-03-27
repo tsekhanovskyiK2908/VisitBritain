@@ -1,0 +1,28 @@
+﻿@model Lab3.Models.Slide
+<footer class="common-Footer">
+    <!--To make responsive maybe add burger menu-->
+    <div class="burger-Menu-Icon" onclick="showSocialsResponsive()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="find-Us" id="find-Us">
+        <i class="fas fa-arrow-left"></i>
+        <span class="find-Us-Font">Find us</span>
+    </div>
+    <div class="socials" id="socials-To-Make-Responsive">
+        <div class="icon-And-Link">
+            <i class="fas fa-wifi icon-Footer"></i>
+            <a href="#"><span class="footer-Font ">visitbritain.org</span></a>
+        </div>
+        <div class="icon-And-Link">
+            <i class="fab fa-twitter icon-Footer"></i>
+            <a href="#"><span class="footer-Font">@@VisitBritainBiz</span></a>
+        </div>
+        <div class="icon-And-Link">
+            <i class="fab fa-linkedin icon-Footer"></i>
+            <a href="#"><span class="footer-Font">VisitBritain</span></a>
+        </div>
+    </div>
+    <div class="page-Number">
+        <span>@Model.Number</span>
+    </div>
+</footer>

@@ -22,9 +22,45 @@ namespace Lab3
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/animation").Include(
+                "~/Scripts/main.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/interactive").Include(
+                "~/Scripts/meetUs.js"));            
+
+            bundles.Add(new StyleBundle("~/Content/commonStyles").Include(
+                      "~/Content/Common/common.css",
+                      "~/Content/Common/reset.css",
+                      "~/Content/Common/circles.css",
+                      "~/Content/Fontawesome/all.css",
+                      "~/Content/Fontawesome/fontawesome.css"));
+
+            bundles.Add(new StyleBundle("~/Content/overview").Include(
+                "~/Content/overview.css"));
+
+            bundles.Add(new StyleBundle("~/Content/content").Include(
+                "~/Content/content.css"));
+
+            bundles.Add(new StyleBundle("~/Content/chapterStyle").Include(
+                "~/Content/Chapters/chapterStart.css"));
+
+            bundles.Add(new StyleBundle("~/Content/inboundMarketStat").Include(
+                "~/Content/Chapters/chapter1.css"));
+
+            bundles.Add(new StyleBundle("~/Content/keyInsights1").Include(
+                "~/Content/Chapters/chapter1_1.css"));
+
+            //bundles.Add(new StyleBundle("~/Content/fontawesome").Include(
+            //    "~/Content/Fontawesome/all.css",
+            //    "~/Content/Fontawesome/fontawesome.css"));
+
+            bundles.Add(new StyleBundle("~/Content/startPage").Include(
+                "~/Content/title.css"));
+
+            bundles.Add(new StyleBundle("~/Content/form").Include(
+                "~/Content/formStyle.css",
+                "~/Content/Common/common.css",
+                "~/Content/Common/reset.css"));
         }
     }
 }

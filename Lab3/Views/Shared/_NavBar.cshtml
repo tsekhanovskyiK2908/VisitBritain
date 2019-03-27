@@ -1,0 +1,17 @@
+﻿@model Lab3.Models.Slide
+
+<nav class="links-To-Nearest-Pages">
+    @try
+    {
+        foreach (var link in Model.Links)
+        {
+            <a href="/@link.ControllerName/@link.ActionName">
+                <p>@link.LinkText</p>
+            </a>
+        }
+    }
+    catch
+    {
+        <span>An error occured when displaying navbar</span>
+    }
+</nav>

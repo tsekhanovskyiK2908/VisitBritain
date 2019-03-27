@@ -1,0 +1,454 @@
+:root {
+    --header-color: #120743;
+    --rotatedSquareColor: #0e0031;
+    --commonheaderfont-color: #fffeff;
+    --accent-font-color:#c30000;
+    --inner-circle-color:#ff3445;
+    --chapterTheme-font: #ba0400;
+    --slide-font-color: #130445;
+    --footer-font-color: #c2cdc9;
+    --circles-border-blue:#1f87ae;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1500px;
+    min-width: 320px;
+    background-color: gray;
+    opacity: 1;
+    transition: 1s opacity;  
+    -moz-transition: 1s opacity;  
+}
+
+.fade {
+    opacity: 0;
+    transition: none;
+}
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1250px) {
+    .topic-Items-And-Diagram {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diagram-Spend-Pounds {
+        margin: 30px 0;
+    }
+    
+    .general-Block {    
+        padding: 35px 30px 30px 30px !important;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:979px) {
+
+    .general-Block {    
+        padding: 25px 20px 20px 20px !important;
+    }
+    
+    .slide-Block {
+        margin-top: 20px !important;
+        padding: 20px 10px 0px 10px !important;
+    }
+         
+    .links-To-Nearest-Pages {
+        margin-top: 25px !important;
+    }
+
+    .common-Footer {
+        padding: 25px 30px 0px 30px !important
+    }
+    
+    .topic-Items-And-Diagram {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic-Items {        
+        margin-top: 10px !important;
+        margin-right: 0px !important;
+    }
+
+    .topic-Items ul p {
+        font-size: 24px !important;
+    }
+
+    .diagram-Spend-Pounds {
+        margin-top: 15px;
+    }
+    
+    .slide-Title {
+        margin-bottom: 30px !important;
+    }
+    
+    .source-Font {
+        font-size: 14px !important;
+    }
+    
+}
+
+@media only screen and (max-width:767px) {    
+    
+    .common-Header {
+        height: 40px !important;
+    }
+
+    .market-And-Trade-Profile-Wrapper {       
+        display: none;
+        
+    }
+
+    .market-And-Trade-Profile-Wrapper-Responsive {
+        display: block;
+        position: absolute;
+        right: 40px;
+        width: 80px;
+        top: 15px;
+        background: var(--header-color);
+        text-align: center;
+    }
+
+    .gb-Flag-And-Text {
+        left: 0px !important;
+    }
+
+    .polish-Flag-And-Text img {
+        width: 25px;
+        margin: 0 !important;
+    }
+    
+    .common-Header-Text {
+        font-size: 22px !important;;
+    }
+
+    .common-Header-Text-Thiner {
+        font-size: 18px !important;
+    }
+    
+    .rotated-Square-Wrapper {
+        margin-left: 10px !important;
+        margin-top: 0px !important;
+    }
+    
+    .rotated-Square {
+        width: 50px !important;
+        height: 50px !important ;
+    }
+
+    .rotated-Square-Mouse-Over {
+        transform: rotate( 90deg );   
+        transition: transform 150ms ease;         
+        -moz-transition: transform 150ms ease;
+    }
+
+    .rotated-Square-Mouse-Over {
+        transform: rotate(-90deg);
+        transition: transform 150ms ease;
+    }
+    
+    .general-Block {
+        padding: 15px 0 0 0 !important;
+    }   
+            
+    .slide-Block {
+        padding: 10px !important;
+        margin-top: 30px !important;
+    }
+    
+    .slide-Title {
+        margin-bottom: 25px !important;
+        font-size: 34px !important;
+    }
+        
+    .links-To-Nearest-Pages {
+        margin-top: 20px !important;
+    }
+    
+    .links-To-Nearest-Pages a span {
+        font-size: 22px !important;
+    }
+
+    .topic-Items-And-Diagram {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic-Items {        
+        margin-top: 10px !important;
+        margin-right: 0px !important;
+    }
+
+    .topic-Items ul p {
+        font-size: 20px !important;
+    }
+
+    .diagram-Spend-Pounds {
+        margin-top: 15px;
+    }
+
+    .source-Font {
+        font-size: 12px !important;
+    }
+    
+    .burger-Menu-Icon {
+        display: block !important;
+    }
+
+    .find-Us {
+        display: flex !important;
+        align-items:center;              
+    }
+
+    .find-Us-Responsive {
+        display: none;
+    }
+
+    .find-Us-Font {
+        color: #000;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    i.fa-arrow-left {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    i.fa-bars {
+        font-size: 30px;
+    }
+
+    .socials {
+        display: none !important;
+    }
+
+    .common-Footer {
+        padding: 30px 30px 0px 30px !important;
+        justify-content: space-between;
+        flex-grow: 0;
+        position: relative;   
+    }
+
+    .links-To-Nearest-Pages a p {
+        font-size: 20px !important;
+    }
+
+    /* .common-Footer div {
+        position: relative;
+    } */
+
+    .socials-From-Burger {
+        flex-direction: column;
+        z-index: 100;
+        position: absolute;
+        left: 60px;
+        bottom: 5px;
+        background: var(--circles-border-blue);
+        transition: 0.5s opacity;  
+        -moz-transition: 0.5s opacity;
+    }
+
+        .icon-And-Link {
+            height: 50px;
+            align-items: center;
+            border: 1px solid var(--accent-font-color);
+        }
+}
+
+/* COMMON ELEMENTS */
+
+.general-Block {
+    padding: 52.5px 52.5px 50px 52.5px;
+    background-color: #fff;
+    /* max-height: 1250px; */
+}
+
+.common-Header {
+    background: var(--header-color);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.rotated-Square-Wrapper{
+    margin-left: 45px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.rotated-Square {
+    background: var(--rotatedSquareColor);
+    transform: rotate(45deg);
+    width: 65px;
+    height: 65px;
+}
+
+.gb-Flag-And-Text {
+    display: flex;
+    z-index: 2;
+    left: 25px;
+    align-items: center;
+    position: relative;
+}
+
+.common-Header-Text {
+    font-size: 32px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--commonheaderfont-color);
+    vertical-align: middle;
+}
+
+.common-Header-Text-Thiner {
+    font-size: 22px;
+    color: var(--commonheaderfont-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    word-spacing: 2px;
+    vertical-align: middle;
+}
+
+.polish-Flag-And-Text-Wrapper {
+    display: flex;
+}
+
+.polish-Flag-And-Text {
+    display: flex;    
+    align-items: center;    
+}
+
+.common-Header img {
+    margin: 10px;
+}
+
+.slide-Title {
+    color: var(--accent-font-color);
+    font-size: 42px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.overview-Slide-Color {
+    background-color: #eff1f0;
+}
+
+.topic-Items-And-Diagram {
+    display: flex;
+}
+
+.topic-Items {
+    margin-top: 35px;
+}
+
+.nth-Font {
+    font-size: 20px;
+    vertical-align: text-top;
+}
+
+.topic-Item-Font {
+    font-size: 25pt;
+    color: var(--slide-font-color);
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.source-Font {
+    font-size: 11pt;
+    color: var(--slide-font-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic; 
+}
+
+.topic-Items ul p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 29px;
+    font-weight: 400;
+    color: var(--slide-font-color);
+    margin: 0;
+}
+
+.links-To-Nearest-Pages {
+    display: flex;
+    justify-content: space-evenly;
+    flex: auto;
+    margin-top: 40px;
+}
+
+.links-To-Nearest-Pages a:visited p {
+    color: var(--circles-border-blue);
+}
+
+.links-To-Nearest-Pages a:hover p {
+    color: green;
+}
+
+.links-To-Nearest-Pages a:active p {
+    color: var(--accent-font-color);
+}
+
+.links-To-Nearest-Pages a p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    color: var(--rotatedSquareColor);
+    text-align: center;
+
+}
+
+.common-Footer {
+    display: flex;
+    padding: 30px 0px 0px 50px;
+}
+
+.footer-Font {
+    font-size: 18px;
+    color: var(--footer-font-color);
+}
+
+.burger-Menu-Icon {
+    display: none;
+}
+
+.icon-And-Link {
+    display: flex;    
+}
+
+.icon-Footer {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.find-Us {
+    display: none;
+}
+
+.socials {
+    padding-right: 135px;
+    padding-left: 35px;
+    display: flex;        
+    flex: auto;
+    justify-content: space-between;
+}
+
+.page-Number {
+    display: flex;
+    align-items: center;
+}
+
+.page-Number span{
+    color: var(--slide-font-color);
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.slide-Block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    padding: 50px 70px 0px 60px;
+}

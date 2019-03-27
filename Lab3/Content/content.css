@@ -1,0 +1,189 @@
+.content-Slide {
+    margin-top: 5px;
+}
+
+.slide-Title-Content {
+    margin-bottom: 0;
+}
+
+.chapters-Number-Font {
+    color: var(--accent-font-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.chapters-Name-Font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: var(--slide-font-color);
+    font-weight: 600;
+}
+
+.chapter-Link-Font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--slide-font-color);
+    text-decoration: underline;
+}
+
+.chapters-And-Circles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chapters-Grid {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.chapter-Counter {
+    counter-reset: chapter; 
+    list-style-type: none;
+    margin-right: 60px;
+}
+
+li.chapter-Number::before {
+    counter-increment: chapter;
+    content: counter(chapter);
+    opacity: 0;
+    
+}
+
+ol.chapter-Number {
+    padding-inline-start: 5px;
+}
+
+li.chapter-Number ol{
+    counter-reset: subchapter; 
+    list-style-type: none;
+}
+
+ol.chapter-Counter li.subchapter-Number {
+    list-style-type: none;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--slide-font-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subchapter-Number::before {
+    counter-increment: subchapter;
+    content: counter(chapter)"."counter(subchapter);
+}
+
+.subchapter-Number {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.link-And-Page {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    width: 420px;
+    align-items: center;
+}
+
+.laptop-Wrapper {
+    margin-left: -45px;
+}
+
+@media only screen and (min-width: 978px) and (max-width: 1500px) {
+    .chapters-And-Circles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chapter-Counter {
+        display: flex;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+
+    .link-And-Page {
+        width: 700px;
+    }
+
+    .chapter-Link-Font {
+        font-size: 25px;
+    }
+
+    ol.chapter-Counter li.subchapter-Number {
+        font-size: 25px;
+    }
+
+    .chapters-Number-Font {
+        font-size: 28px;
+    }
+
+    .chapters-Name-Font {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:979px) {
+    .chapter-Counter {
+        padding-inline-start: 0px !important;
+        margin-right:  0px !important;
+        width: 100% !important;
+        margin-right: 0;
+    }
+    
+    li.chapter-Number ol {
+        padding-inline-start: 20px;
+    }
+    
+    .link-And-Page {
+        width: 100% !important;
+    }
+
+    ol.chapter-Counter li.subchapter-Number {
+        font-size: 24px;
+    }
+
+    .chapter-Link-Font {
+        font-size: 24px;
+    }
+    
+    .chapters-And-Circles {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    
+    .chapter-Counter {
+        padding-inline-start: 0px !important;
+        margin-right:  0px !important;
+        width: 100% !important;
+        margin-right: 0;
+    }
+    
+    li.chapter-Number ol {
+        padding-inline-start: 10px;
+    }
+    
+    .link-And-Page {
+        width: 100% !important;
+    }
+
+    ol.chapter-Counter li.subchapter-Number {
+        font-size: 20px;
+    }
+
+    .chapter-Link-Font {
+        font-size: 20px;
+    }
+    
+    .chapters-And-Circles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+}

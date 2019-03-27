@@ -1,31 +1,66 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model Lab3.Models.Slide
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@Styles.Render("~/Content/startPage")
+@Styles.Render("~/Content/commonStyles")
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<body>
+    <div class="introduction">
+        <div class="introduction-Title">
+            <span class="intro-Text-First">
+                Developing England’s tourism product.
+            </span>
+            <h2 class="intro-Text-Second">
+                Inspiring the world to explore Britain
+            </h2>
+            <img src="@Url.Content("~/Content/Images/BritishFlagBig.png")" alt="">
+        </div>
+        <form action="">
+            <div class="inputs-Group">
+                <input type="text" placeholder="Your Name" class="general-Input">
+                <input type="email" placeholder="Email" class="general-Input">
+                <button type="submit" class="general-Button">Subscribe</button>
+                <button type="button" class="general-Button"><a href="/Form/Index">Meet Us</a></button>
+            </div>
+        </form>
+        <button class="button-Go-To-Main" onclick="scrollToMain()">
+            Let's start exploring Poland market
+        </button>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="general-Block">
+        <div class="logo-Holder">
+            <div class="flag-And-Text">
+                <img src="@Url.Content("~/Content/Images/BritishFlagBigger.png")">
+                <span class="logo-Font">VisitBritain<span class="registered-Symbol-Font">&reg;</span></span>
+            </div>
+        </div>
+        <div class="main-Slide-Wrapper">
+            <div class="theme-And-Traiangle-Wrapper">
+                <div class="theme-Of-Presentation">
+                    <p class="presentation-Theme-Font">
+                        Market and
+                        <br>
+                        Trade Profile: Poland
+                    </p>
+                </div>
+                <div class="under-Title-Triangle-Wrapper">
+                    <div class="under-Title-Triangle">
+                    </div>
+                </div>
+            </div>
+            <div class=" slide-Block country-And-Circles ">
+                <div class="country-Name">
+                    <span class="slide-Title">Poland</span>
+                </div>
+                @Html.Partial("_Circles")
+            </div>
+        </div>
+        @Html.Partial("_NavBar")
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</body>
+
+@Scripts.Render("~/bundles/animation")

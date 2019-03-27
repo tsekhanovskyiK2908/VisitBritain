@@ -1,0 +1,40 @@
+﻿@model Lab3.Models.Slide
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/Content/chapterStyle")
+
+<div class="start-Of-Chapter-Slide" id="start-Of-Chapter">
+    <div class="chapter-Number-And-Theme">
+        <div class="chapter-Number-And-Theme-Wrapper">
+            <p class="chapter-Theme-Font">
+                @RenderBody()
+            </p>
+        </div>
+    </div>
+    <div class="circles-And-Plane">
+        <div class="market-Icons" onclick="rotateCircles('item-In-Circle');makePlaneToFly()">
+            <div class="market-Icons-Item">
+                <div class="item-In-Circle building">
+                    <i class="fas fa-landmark"></i>
+                </div>
+            </div>
+            <div class="market-Icons-Item">
+                <div class="market-Icon-Chartline-Wrapper">
+                    <div class="item-In-Circle chartline">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blue-Circle">
+            <div class="red-Circle">
+                <img class="earth-And-Plane" src="@Url.Content("~/Content/Images/earthAndPlane.png")" class="earth-And-Plane" id="plane-To-Fly">
+            </div>
+        </div>
+    </div>
+</div>
+

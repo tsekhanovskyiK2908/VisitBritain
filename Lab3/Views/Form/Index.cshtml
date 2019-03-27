@@ -1,0 +1,59 @@
+﻿@model Lab3.Models.Slide
+
+@{
+    ViewBag.Title = Model.Name;
+    Layout = null;
+}
+
+@Styles.Render("~/Content/form")
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1 class="text-center header-font">
+        <span class="accent-color">Meet Us</span> form
+    </h1>
+    <form class="feedback-form">
+        <!--</form>action="/submit-form-with-post" method="POST"-->
+        <div class="name-surname">
+            <label>
+                <input type="text" placeholder="Your name" id="name-input" name="name">
+                <input type="text" placeholder="Your surname" id="surname-input" name="surname">
+            </label>
+        </div>
+        <div class="email-subject">
+            <label>
+                <input type="email" placeholder="Email" id="email-input" name="email">
+            </label>
+            <label>
+                <input type="subject" placeholder="Subject" id="subject-input" name="subject">
+            </label>
+        </div>
+        <div class="message">
+            <label>
+                <!-- <input type="text" placeholder="Your message" id="message-input" name="message"> -->
+                <textarea placeholder="Your message"></textarea>
+            </label>
+        </div>
+        <div class="date-Time">
+            <label>
+                <input type="date" id="date-input">
+            </label>
+            <label>
+                <input type="time" id="time-input" min="9:00" max="20:00" required>
+            </label>
+        </div>
+        <div class="send-button">
+            <label>
+                <button type="button" id="submit-button" onclick="setDateAndTime()">Send</button>
+            </label>
+        </div>
+    </form>
+    @Html.Partial("_NavBar")
+</body>
+
+</html>
+@Scripts.Render("~/bundles/interactive")
+@*@Scripts.Render("~/ bundles / interactive")*@
