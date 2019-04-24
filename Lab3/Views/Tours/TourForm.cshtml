@@ -1,0 +1,56 @@
+﻿@model Lab3.Models.Tour
+@{
+    ViewBag.Title = "TourForm";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>TourForm</h2>
+
+@using (Html.BeginForm("Save", "Tours"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(t => t.Name)
+        @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.DepartureCity)
+        @Html.TextBoxFor(t => t.DepartureCity, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.DepartureCity)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.DepartureDate)
+        @Html.TextBoxFor(t => t.DepartureDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.DepartureDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.ArrivalCity)
+        @Html.TextBoxFor(t => t.ArrivalCity, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.ArrivalCity)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.ArrivalDate)
+        @Html.TextBoxFor(t => t.ArrivalDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.ArrivalDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.Price)
+        @Html.TextBoxFor(t => t.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.Price)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(t => t.PlaceNumber)
+        @Html.TextBoxFor(t => t.PlaceNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(t => t.PlaceNumber)
+    </div>
+    @Html.HiddenFor(t => t.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit">Save</button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

@@ -28,12 +28,16 @@ namespace Lab3
             bundles.Add(new ScriptBundle("~/bundles/interactive").Include(
                 "~/Scripts/meetUs.js"));            
 
+
             bundles.Add(new StyleBundle("~/Content/commonStyles").Include(
                       "~/Content/Common/common.css",
                       "~/Content/Common/reset.css",
                       "~/Content/Common/circles.css",
                       "~/Content/Fontawesome/all.css",
                       "~/Content/Fontawesome/fontawesome.css"));
+
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
+                      "~/Content/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/overview").Include(
                 "~/Content/overview.css"));

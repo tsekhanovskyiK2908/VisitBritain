@@ -12,6 +12,7 @@ namespace Lab3.Controllers
         // GET: Form
         public ActionResult Index()
         {
+
             var slide = new Slide
             {                
                 Name = "Meet Us Form",

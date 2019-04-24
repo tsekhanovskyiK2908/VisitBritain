@@ -1,4 +1,4 @@
-﻿@model Lab3.Models.Slide
+﻿@*@model Lab3.Models.Slide*@
 <footer class="common-Footer">
     <!--To make responsive maybe add burger menu-->
     <div class="burger-Menu-Icon" onclick="showSocialsResponsive()">
@@ -22,7 +22,10 @@
             <a href="#"><span class="footer-Font">VisitBritain</span></a>
         </div>
     </div>
-    <div class="page-Number">
-        <span>@Model.Number</span>
-    </div>
+    @*<div class="page-Number">
+        @if (Model != null && Model.Number!=0)
+        {
+            <span>@Model.Number</span>
+        }
+    </div>*@
 </footer>

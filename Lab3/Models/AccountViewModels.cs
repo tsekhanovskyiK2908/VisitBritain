@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Lab3.Models
@@ -63,7 +64,8 @@ namespace Lab3.Models
     }
 
     public class RegisterViewModel
-    {
+    {       
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

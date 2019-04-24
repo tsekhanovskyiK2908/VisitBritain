@@ -10,6 +10,5 @@ namespace Lab3.Models
         public string LinkText { get; set; }
         public string ActionName { get; set; }
         public string ControllerName { get; set; }
-
     }
 }

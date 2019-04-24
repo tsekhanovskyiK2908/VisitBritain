@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Lab3.Models.Tour>
+@{
+    ViewBag.Title = "Tours";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Tours</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Departure City</th>
+            <th>Departure Date</th>
+            <th>Arrival City</th>
+            <th>Arrival Date</th>
+            <th>Price</th>
+            <th>Number of Places</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tour in Model)
+        {
+            <tr>
+                @Html.ActionLink(tour.Name, "Edit", "Tours", new { id = tour.Id},null )
+                <td>
+                    @Html.ActionLink(tour.Name, "Edit", "Tours", new { id = tour.Id }, null)
+                </td>
+                <td>@tour.DepartureCity</td>
+                <td>@tour.DepartureDate</td>
+                <td>@tour.ArrivalCity</td>
+                <td>@tour.ArrivalDate</td>
+                <td>@tour.Price</td>
+                <td>@tour.PlaceNumber</td>
+                <td>
+                    <button>@Html.ActionLink("Delete", "Delete", "Tours", new { id = tour.Id }, null)</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
