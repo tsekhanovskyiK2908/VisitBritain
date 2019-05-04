@@ -64,7 +64,26 @@ namespace Lab3.Models
     }
 
     public class RegisterViewModel
-    {       
+    {
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public string Surname { get; set; }
+
+        [Required]
+        public string PassportNumber { get; set; }
+
+        [Required]
+        [Display(Name = "Birth Date")]
+        public DateTime BirthDate { get; set; }
+
+        [Required]
+        public string Phone { get; set; }
+
+        [Required]
+        [Display(Name = "Is subscribed")]
+        public bool IsSubscribed { get; set; }
 
         [Required]
         [EmailAddress]

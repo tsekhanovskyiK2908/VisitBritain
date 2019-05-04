@@ -6,8 +6,7 @@ namespace Lab3.Migrations
     public partial class PopulateTours : DbMigration
     {
         public override void Up()
-        {
-            
+        {            
         }
         
         public override void Down()

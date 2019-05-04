@@ -41,10 +41,10 @@ namespace Lab3.Models
         [Display(Name = "Places avaliable")]
         public int PlaceNumber { get; set; }
 
-        public Tour()
-        {
-            Id = Guid.Empty;
-        }
+        //public Tour()
+        //{
+        //    Id = Guid.Empty;
+        //}
 
     }
 }

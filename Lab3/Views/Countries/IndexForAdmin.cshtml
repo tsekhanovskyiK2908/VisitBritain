@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Lab3.Models.Country>
+@{
+    ViewBag.Title = "Countries";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Tours</h2>
+<button>
+    @Html.ActionLink("Add Country", "New", "Countries")
+</button>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Language</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var country in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(country.Name, "Edit", "Countries", new { id = country.Id }, null)
+                </td>
+                <td>@country.Language</td>
+                <td>
+                    <button>@Html.ActionLink("Delete Country", "Delete", "Countries", new { id = country.Id }, null)</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

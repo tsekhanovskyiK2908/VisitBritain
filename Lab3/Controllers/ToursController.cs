@@ -19,13 +19,14 @@ namespace Lab3.Controllers
 
         protected override void Dispose(bool disposing)
         {
+            base.Dispose(disposing);
             _context.Dispose();
         }
 
         [Authorize(Roles = RoleName.CanManageToursAndUsers)]
         public ActionResult New()
         {
-            return View("TourForm");
+            return View("TourForm", new Tour());
         }
 
         [HttpPost]
@@ -35,12 +36,11 @@ namespace Lab3.Controllers
         {   
             if(!ModelState.IsValid)
             {
-                return View("TourForm");
+                return View("TourForm", tour);
             }
 
             if (tour.Id == Guid.Empty)
             {
-                tour.Id = new Guid();
                 _context.Tours.Add(tour);
             }
             else
@@ -70,9 +70,25 @@ namespace Lab3.Controllers
                 return HttpNotFound();
             }
 
-            return View("TourForm");
+            return View("TourForm", tour);
         }
 
+        [Authorize(Roles = RoleName.CanManageToursAndUsers)]
+        //[HttpDelete]
+        public ActionResult Delete(Guid id)
+        {
+            var tourInDb = _context.Tours.SingleOrDefault(t => t.Id == id);           
+
+            if(tourInDb==null)
+            {
+                return HttpNotFound();
+            }
+
+            _context.Tours.Remove(tourInDb);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Tours");
+        }
         // GET: Tour
         public ActionResult Index()
         {    

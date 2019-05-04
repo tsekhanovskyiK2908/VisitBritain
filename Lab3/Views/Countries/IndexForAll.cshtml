@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Lab3.Models.Country>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Users</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Language</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var country in Model)
+        {
+            <tr>
+                <td>@country.Name</td>
+                <td>@country.Language</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

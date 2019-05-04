@@ -5,7 +5,9 @@
 }
 
 <h2>Tours</h2>
-
+<button>
+    @Html.ActionLink("New Tour","New","Tours")
+</button> 
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -23,7 +25,6 @@
         @foreach (var tour in Model)
         {
             <tr>
-                @Html.ActionLink(tour.Name, "Edit", "Tours", new { id = tour.Id},null )
                 <td>
                     @Html.ActionLink(tour.Name, "Edit", "Tours", new { id = tour.Id }, null)
                 </td>
@@ -34,7 +35,7 @@
                 <td>@tour.Price</td>
                 <td>@tour.PlaceNumber</td>
                 <td>
-                    <button>@Html.ActionLink("Delete", "Delete", "Tours", new { id = tour.Id }, null)</button>
+                    <button>@Html.ActionLink("Delete Tour", "Delete", "Tours", new { id = tour.Id }, null)</button>
                 </td>
             </tr>
         }

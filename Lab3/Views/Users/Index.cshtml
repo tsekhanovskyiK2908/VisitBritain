@@ -1,0 +1,34 @@
+﻿@model List<Lab3.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Users</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Birth Date</th>
+            <th>Is subscribed</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var user in Model)
+        {              
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.Email</td>
+                <td>@user.Phone</td>
+                <td>@user.BirthDate</td>
+                <td>@user.IsSubscribed</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

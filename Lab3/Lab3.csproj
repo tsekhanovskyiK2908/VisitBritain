@@ -177,6 +177,8 @@
     <Compile Include="Controllers\Chapter1Controller.cs" />
     <Compile Include="Controllers\Chapter2Controller.cs" />
     <Compile Include="Controllers\Chapter3Controller.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
+    <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -217,8 +219,27 @@
     <Compile Include="Migrations\201904240016587_SeedUsers.Designer.cs">
       <DependentUpon>201904240016587_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904240930008_ModifyApplicationUser.cs" />
+    <Compile Include="Migrations\201904240930008_ModifyApplicationUser.Designer.cs">
+      <DependentUpon>201904240930008_ModifyApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905032031273_AddCorrectIdColumns.cs" />
+    <Compile Include="Migrations\201905032031273_AddCorrectIdColumns.Designer.cs">
+      <DependentUpon>201905032031273_AddCorrectIdColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905041939221_AddCountriesCitiesAndCityTypes.cs" />
+    <Compile Include="Migrations\201905041939221_AddCountriesCitiesAndCityTypes.Designer.cs">
+      <DependentUpon>201905041939221_AddCountriesCitiesAndCityTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905042148355_PopulateCityStatuses.cs" />
+    <Compile Include="Migrations\201905042148355_PopulateCityStatuses.Designer.cs">
+      <DependentUpon>201905042148355_PopulateCityStatuses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\CityStatus.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Link.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -339,10 +360,14 @@
     <Content Include="Views\Tours\IndexForAdmin.cshtml" />
     <Content Include="Views\Shared\_FormLayout.cshtml" />
     <Content Include="Views\Tours\TourForm.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Countries\CountryForm.cshtml" />
+    <Content Include="Views\Countries\IndexForAll.cshtml" />
+    <Content Include="Views\Countries\IndexForAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Users\" />
+    <Folder Include="Views\Cities\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
@@ -381,6 +406,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904240016587_SeedUsers.resx">
       <DependentUpon>201904240016587_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904240930008_ModifyApplicationUser.resx">
+      <DependentUpon>201904240930008_ModifyApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905032031273_AddCorrectIdColumns.resx">
+      <DependentUpon>201905032031273_AddCorrectIdColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905041939221_AddCountriesCitiesAndCityTypes.resx">
+      <DependentUpon>201905041939221_AddCountriesCitiesAndCityTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905042148355_PopulateCityStatuses.resx">
+      <DependentUpon>201905042148355_PopulateCityStatuses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

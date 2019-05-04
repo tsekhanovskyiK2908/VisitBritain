@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(t => t.DepartureDate)
-        @Html.TextBoxFor(t => t.DepartureDate, new { @class = "form-control" })
+        @Html.TextBoxFor(t => t.DepartureDate, new { @type = "date", @class = "form-control" })
         @Html.ValidationMessageFor(t => t.DepartureDate)
     </div>
     <div class="form-group">
@@ -31,7 +31,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(t => t.ArrivalDate)
-        @Html.TextBoxFor(t => t.ArrivalDate, new { @class = "form-control" })
+        @Html.TextBoxFor(t => t.ArrivalDate, new { @type = "date", @class = "form-control" })
         @Html.ValidationMessageFor(t => t.ArrivalDate)
     </div>
     <div class="form-group">
@@ -49,8 +49,8 @@
     <button type="submit">Save</button>
 }
 
-@section scripts
+@*@section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")
-}
+}*@
 
