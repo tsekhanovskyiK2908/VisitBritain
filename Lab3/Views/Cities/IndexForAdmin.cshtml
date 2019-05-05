@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Lab3.Models.City>
+@{
+    ViewBag.Title = "IndexForAdmin";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Cities</h2>
+<button>
+    @Html.ActionLink("Add City", "New", "Cities")
+</button>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City Status</th>
+            <th>Country</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(city.Name, "Edit", "Cities", new { id = city.Id }, null)</td>
+                <td>@city.CityStatus.Name</td>
+                <td>@city.Country.Name</td>
+                <td>
+                    <button>@Html.ActionLink("Delete City", "Delete", "Cities", new { id = city.Id }, null)</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

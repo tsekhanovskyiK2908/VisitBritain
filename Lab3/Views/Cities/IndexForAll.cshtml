@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Lab3.Models.City>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>Cities</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City Status</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var city in Model)
+        {
+        <tr>
+            <td>@city.Name</td>
+            <td>@city.CityStatus.Name</td>
+            <td>@city.Country.Name</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
