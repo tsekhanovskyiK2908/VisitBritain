@@ -45,7 +45,7 @@ namespace Lab3.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Tour> Tours { get; set; }
-        public DbSet<ToursOfCustomer> ToursOfCustomers { get; set; }
+        public DbSet<TourOfCustomer> ToursOfCustomers { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<CityStatus> CityStatuses { get; set; }

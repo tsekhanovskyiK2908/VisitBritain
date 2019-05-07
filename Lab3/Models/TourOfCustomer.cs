@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Lab3.Models
 {
-    public class ToursOfCustomer
+    public class TourOfCustomer
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

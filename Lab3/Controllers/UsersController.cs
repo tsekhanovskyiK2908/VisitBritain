@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Lab3.Controllers
 {
@@ -26,6 +27,21 @@ namespace Lab3.Controllers
         public ActionResult New()
         {
             return View("CustomerForm");
+        }
+
+        public IEnumerable<ApplicationUser> GetApplicationUsers()
+        {
+            var allUsers = _context.Users.ToList();
+
+            for (int i = 0; i < allUsers.Count; i++)
+            {
+                if(Roles.GetRolesForUser(allUsers[i].UserName).Contains(RoleName.CanManageToursAndUsers))
+                {
+                    allUsers.Remove(allUsers[i]);
+                }
+            }
+
+            return allUsers;
         }
 
         // GET: Users

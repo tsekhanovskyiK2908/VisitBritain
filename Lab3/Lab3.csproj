@@ -173,6 +173,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Chapter1Controller.cs" />
     <Compile Include="Controllers\Chapter2Controller.cs" />
@@ -184,7 +185,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ToursController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201905042148355_PopulateCityStatuses.Designer.cs">
       <DependentUpon>201905042148355_PopulateCityStatuses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905062203344_CorrectNameForTourOfCustomer.cs" />
+    <Compile Include="Migrations\201905062203344_CorrectNameForTourOfCustomer.Designer.cs">
+      <DependentUpon>201905062203344_CorrectNameForTourOfCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\City.cs" />
@@ -247,10 +251,11 @@
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Models\Slide.cs" />
     <Compile Include="Models\Tour.cs" />
-    <Compile Include="Models\ToursOfCustomer.cs" />
+    <Compile Include="Models\TourOfCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CityFormViewModel.cs" />
+    <Compile Include="ViewModels\OrderFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -424,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905042148355_PopulateCityStatuses.resx">
       <DependentUpon>201905042148355_PopulateCityStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905062203344_CorrectNameForTourOfCustomer.resx">
+      <DependentUpon>201905062203344_CorrectNameForTourOfCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
