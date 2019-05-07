@@ -1,0 +1,15 @@
+﻿@model Lab3.Models.City
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+<ul>
+    <li>City: @Model.Name</li>
+    <li>Country: @Model.Country.Name</li>
+    <li>Status: @Model.CityStatus.Name</li>
+    <li>Description: @Model.Description</li>
+</ul>
+

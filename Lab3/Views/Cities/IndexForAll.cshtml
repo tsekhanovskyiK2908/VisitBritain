@@ -18,7 +18,7 @@
         @foreach (var city in Model)
         {
         <tr>
-            <td>@city.Name</td>
+            <td>@Html.ActionLink(city.Name, "Details", "Cities", new { id = city.Id},null)</td>
             <td>@city.CityStatus.Name</td>
             <td>@city.Country.Name</td>
         </tr>

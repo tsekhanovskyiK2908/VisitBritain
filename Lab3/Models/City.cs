@@ -26,5 +26,8 @@ namespace Lab3.Models
         [Required]
         public Guid CountryId { get; set; }
 
+        [Required]
+        public string Description { get; set; }
+
     }
 }

@@ -9,6 +9,12 @@ namespace Lab3.Controllers
 {
     public class HomeController : Controller
     {
+        private LinksHolder _linksHolder;
+
+        public HomeController()
+        {
+            _linksHolder = new LinksHolder();
+        }
         public ActionResult Index()
         {
             var slide = new Slide
@@ -16,20 +22,8 @@ namespace Lab3.Controllers
                 Name = "VisitBritain",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Go to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Go to overview",
-                        ActionName = "Overview",
-                        ControllerName = "Home"
-                    }
-
+                    _linksHolder.Content,
+                    _linksHolder.Overview
                 }
             };
 
@@ -44,20 +38,8 @@ namespace Lab3.Controllers
                 Name = "Overview",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Back to main",
-                        ActionName = "Index",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Go to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    }
-
+                    _linksHolder.Main,
+                    _linksHolder.Content
                 }
             };
 
@@ -72,20 +54,8 @@ namespace Lab3.Controllers
                 Name = "Content",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Go to overview",
-                        ActionName = "Overview",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Start the first chapter",
-                        ActionName = "Index",
-                        ControllerName = "Chapter1"
-                    }
-
+                    _linksHolder.Overview,
+                    _linksHolder.Chapter1
                 }
             };
 

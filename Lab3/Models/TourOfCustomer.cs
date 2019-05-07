@@ -13,8 +13,12 @@ namespace Lab3.Models
         [Key]
         public Guid Id { get; set; }
 
+        public ApplicationUser Customer { get; set; } 
+
         [Required]
-        public Guid CustomerId { get; set; }
+        public string CustomerId { get; set; }
+
+        public Tour Tour { get; set; }
 
         [Required]
         public Guid TourId { get; set; }

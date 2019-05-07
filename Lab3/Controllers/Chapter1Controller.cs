@@ -9,29 +9,24 @@ namespace Lab3.Controllers
 {
     public class Chapter1Controller : Controller
     {
+        private LinksHolder _linksHolder;
+
+        public Chapter1Controller()
+        {
+            _linksHolder = new LinksHolder();
+        }
         // GET: Chapter
         public ActionResult Index()
-        {
+        {             
+
             var slide = new Slide
             {
                 Number = 4,
                 Name = "Chapter 1",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Back to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Next slide",
-                        ActionName = "InboundMarketStatistics",
-                        ControllerName = "Chapter1"
-                    }
-
+                    _linksHolder.Content,
+                    _linksHolder.InboundMarketStatistics
                 }
             };
 
@@ -46,27 +41,9 @@ namespace Lab3.Controllers
                 Name = "Chapter 1: Inbound market statistics",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Go back to previous topic",
-                        ActionName = "Index",
-                        ControllerName = "Chapter1"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Back to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Next topic",
-                        ActionName = "KeyInsights1",
-                        ControllerName = "Chapter1"
-                    }
-
+                    _linksHolder.Chapter1,
+                    _linksHolder.Content,
+                    _linksHolder.KeyInsights
                 }
             };
 
@@ -81,27 +58,9 @@ namespace Lab3.Controllers
                 Name = "Chapter 1.1: Key statistics",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Go back to previous topic",
-                        ActionName = "InboundMarketStatistics",
-                        ControllerName = "Chapter1"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Back to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Next chapter",
-                        ActionName = "Index",
-                        ControllerName = "Chapter2"
-                    }
-
+                    _linksHolder.InboundMarketStatistics,
+                    _linksHolder.Content,
+                    _linksHolder.Chapter2
                 }
             };
 

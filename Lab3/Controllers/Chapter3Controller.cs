@@ -9,6 +9,12 @@ namespace Lab3.Controllers
 {
     public class Chapter3Controller : Controller
     {
+        private LinksHolder _linksHolder;
+
+        public Chapter3Controller()
+        {
+            _linksHolder = new LinksHolder();
+        }
         // GET: Chapter3
         public ActionResult Index()
         {
@@ -18,27 +24,9 @@ namespace Lab3.Controllers
                 Name = "Chapter 3",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Go back to previous chapter",
-                        ActionName = "Index",
-                        ControllerName = "Chapter2"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Back to content",
-                        ActionName = "Content",
-                        ControllerName = "Home"
-                    },
-
-                    new Link()
-                    {
-                        LinkText = "Go to main",
-                        ActionName = "Index",
-                        ControllerName = "Home"
-                    }
-
+                    _linksHolder.Chapter2,
+                    _linksHolder.Content,
+                    _linksHolder.Main
                 }
             };
 

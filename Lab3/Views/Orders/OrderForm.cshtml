@@ -1,0 +1,25 @@
+﻿@model Lab3.ViewModels.OrderFormViewModel
+@{
+    ViewBag.Title = "OrderForm";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>OrderForm</h2>
+
+@using (Html.BeginForm("Save", "Orders"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+<div class="form-group">
+    @Html.LabelFor(o => o.TourOfCustomer.TourId)
+    @Html.DropDownListFor(o => o.TourOfCustomer.TourId, new SelectList(Model.Tours, "Id", "Name"), "Select Tour By Name", new { @class = "form-control" })
+    @Html.ValidationMessageFor(o => o.TourOfCustomer.TourId)
+</div>
+    <div class="form-group">
+        @Html.LabelFor(o => o.TourOfCustomer.CustomerId)
+        @Html.DropDownListFor(o => o.TourOfCustomer.CustomerId, new SelectList(Model.ApplicationUsers, "Id", "PassportNumber"), new { @class = "form-control" })
+        @Html.ValidationMessageFor(o => o.TourOfCustomer.CustomerId)
+    </div>
+    @Html.HiddenFor(o => o.TourOfCustomer.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit">Save</button>
+}

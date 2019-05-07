@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Lab3.Models.TourOfCustomer>
+@{
+    ViewBag.Title = "IndexForAdmin";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<h2>IndexForAdmin</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Edit</th>
+            <th>Customer Name</th>
+            <th>Passport Number</th>
+            <th>Tour Name</th>
+            <th>Sold Date</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tourOfCustomer in Model)
+        {
+            <tr>
+                <td>
+                    <button>
+                        @Html.ActionLink("Edit", "Edit", "Orders", new { id = tourOfCustomer.Id }, null)
+                    </button>
+                </td>
+                <td>@tourOfCustomer.Customer.Name @tourOfCustomer.Customer.Surname</td>  
+                <td>@tourOfCustomer.Customer.PassportNumber</td>  
+                <td>@tourOfCustomer.Tour.Name</td>
+                <td>@tourOfCustomer.SoldDate</td>
+                <td>
+                    <button>
+                        @Html.ActionLink("Delete Order", "Delete", "Orders", new { id = tourOfCustomer.Id }, null)
+                    </button>
+                </td> 
+            </tr>
+        }
+    </tbody>
+</table>
+

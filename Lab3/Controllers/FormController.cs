@@ -9,6 +9,12 @@ namespace Lab3.Controllers
 {
     public class FormController : Controller
     {
+        private LinksHolder _linksHolder;
+
+        public FormController()
+        {
+            _linksHolder = new LinksHolder();
+        }
         // GET: Form
         public ActionResult Index()
         {
@@ -18,12 +24,7 @@ namespace Lab3.Controllers
                 Name = "Meet Us Form",
                 Links = new List<Link>
                 {
-                    new Link()
-                    {
-                        LinkText = "Back to main",
-                        ActionName = "Index",
-                        ControllerName = "Home"
-                    }
+                   _linksHolder.Main
                 }
             };
             return View(slide);
