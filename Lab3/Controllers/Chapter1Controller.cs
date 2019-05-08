@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Lab3.ViewModels;
 
 namespace Lab3.Controllers
 {
@@ -30,7 +31,12 @@ namespace Lab3.Controllers
                 }
             };
 
-            return View(slide);
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                Slide = slide
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult InboundMarketStatistics()
@@ -47,7 +53,18 @@ namespace Lab3.Controllers
                 }
             };
 
-            return View(slide);
+            var viewModelWithList = new PageWithListViewModel
+            {
+                Slide = slide,
+                ListItems = TxtListsParser.GetListFormFiles("InboundMarketStatistics")
+            };
+
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                PageWithList = viewModelWithList
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult KeyInsights1()
@@ -64,7 +81,18 @@ namespace Lab3.Controllers
                 }
             };
 
-            return View(slide);
+            var viewModelWithList = new PageWithListViewModel
+            {
+                Slide = slide,
+                ListItems = TxtListsParser.GetListFormFiles("KeyInsights")
+            };
+
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                PageWithList = viewModelWithList
+            };
+
+            return View(viewModel);
         }
 
     }

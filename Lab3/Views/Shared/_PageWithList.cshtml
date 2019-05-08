@@ -10,7 +10,6 @@
 <body onload="fadeBody()">
     <div class="general-Block">
         @Html.Partial("_Header")
-        @Html.Partial("_NavBarUp")
         @RenderBody()
         @Html.Partial("_NavBar")
         @Html.Partial("_Footer")
@@ -20,3 +19,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+

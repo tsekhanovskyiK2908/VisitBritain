@@ -1,6 +1,5 @@
-﻿@*@model Lab3.Models.Slide*@
+﻿@model Lab3.ViewModels.SlideAndSlideWithListsViewModel
 <footer class="common-Footer">
-    <!--To make responsive maybe add burger menu-->
     <div class="burger-Menu-Icon" onclick="showSocialsResponsive()">
         <i class="fas fa-bars"></i>
     </div>
@@ -22,10 +21,18 @@
             <a href="#"><span class="footer-Font">VisitBritain</span></a>
         </div>
     </div>
-    @*<div class="page-Number">
-        @if (Model != null && Model.Number!=0)
+    <div class="page-Number">
+        @if (Model != null)
         {
-            <span>@Model.Number</span>
+            if (Model.Slide == null)
+            {
+                <span>@Model.PageWithList.Slide.Number</span>
+            }
+            else
+            {
+                <span>@Model.Slide.Number</span>
+            }
         }
-    </div>*@
+
+    </div>
 </footer>

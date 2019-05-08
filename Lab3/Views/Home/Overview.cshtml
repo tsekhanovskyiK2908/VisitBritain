@@ -1,30 +1,16 @@
-﻿@model Lab3.Models.Slide
+﻿@model Lab3.ViewModels.SlideAndSlideWithListsViewModel
 @{
     ViewBag.Title = "Overview";
     Layout = "~/Views/Shared/_Slide.cshtml";
 }
 @Styles.Render("~/Content/overview")
     <ul class="overview-Items">
-        <li>
-            <p class="slide-Main-Font">
-                <span class="slide-Secondary-Accent-Font">Chapter 1: Inbound market statistics </span>provides insights on key statistics about
-                Polish travellers and who they are. It takes a look at Britain and its competitive
-                set as well as activities of Polish visitors in the UK.
-            </p>
-        </li>
-        <li>
-            <p class="slide-Main-Font">
-                <span class="slide-Secondary-Accent-Font">Chapter 2: Understanding the market </span>takes a close look at Polish consumer
-                trends, booking, planning and further travel behaviour of this source market.
-                Perceptions of Britain held by Polish people are also highlighted.
-            </p>
-        </li>
-        <li>
-            <p class="slide-Main-Font">
-                <span class="slide-Secondary-Accent-Font">Chapter 3: Access and travel trade </span>shows how Polish people travel to the UK,
-                how to best cater for their needs and wants during their stay and gives insights
-                Perceptions of Britain held by Polish people are also highlighted.
-                useful research resources are pointed out.
-            </p>
-        </li>
+        @foreach (var listItem in Model.PageWithList.ListItems)
+         {
+            <li>
+                <p class="slide-Main-Font">
+                    @Html.Raw(listItem)
+                </p>
+            </li>
+         }
     </ul>

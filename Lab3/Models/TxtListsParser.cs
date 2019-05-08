@@ -8,7 +8,7 @@ namespace Lab3.Models
 {
     public class TxtListsParser
     {
-        public IEnumerable<string> GetListFormFiles(string filename)
+        public static IEnumerable<string> GetListFormFiles(string filename)
         {
             var pathToFile = PathsToFolders.PathToArticles + $"{filename}.txt";
 

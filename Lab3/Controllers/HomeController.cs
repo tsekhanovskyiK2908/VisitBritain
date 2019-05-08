@@ -1,4 +1,5 @@
 ﻿using Lab3.Models;
+using Lab3.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,12 @@ namespace Lab3.Controllers
                 }
             };
 
-            return View(slide);
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                Slide = slide
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Overview()
@@ -43,7 +49,18 @@ namespace Lab3.Controllers
                 }
             };
 
-            return View(slide);
+            var viewModelWithList = new PageWithListViewModel
+            {
+                Slide = slide,
+                ListItems = TxtListsParser.GetListFormFiles(slide.Name)
+            };
+
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                PageWithList = viewModelWithList
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Content()
@@ -59,7 +76,12 @@ namespace Lab3.Controllers
                 }
             };
 
-            return View(slide);
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                Slide = slide
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()

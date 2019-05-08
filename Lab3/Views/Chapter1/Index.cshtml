@@ -1,10 +1,10 @@
-﻿@model Lab3.Models.Slide
+﻿@model Lab3.ViewModels.SlideAndSlideWithListsViewModel
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.Slide.Name;
     Layout = "~/Views/Shared/_Chapter.cshtml";
 }
 
-<span class="chapter-Start-Number-Font">@Model.Name: </span>
+<span class="chapter-Start-Number-Font">@Model.Slide.Name: </span>
 <br>
 Inbound market
 <br>

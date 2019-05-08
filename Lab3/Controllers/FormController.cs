@@ -1,4 +1,5 @@
 ﻿using Lab3.Models;
+using Lab3.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,6 @@ namespace Lab3.Controllers
         // GET: Form
         public ActionResult Index()
         {
-
             var slide = new Slide
             {                
                 Name = "Meet Us Form",
@@ -27,7 +27,13 @@ namespace Lab3.Controllers
                    _linksHolder.Main
                 }
             };
-            return View(slide);
+
+            var viewModel = new SlideAndSlideWithListsViewModel
+            {
+                Slide = slide
+            };
+
+            return View(viewModel);
         }
     }
 }

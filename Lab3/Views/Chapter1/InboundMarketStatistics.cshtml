@@ -1,4 +1,4 @@
-﻿
+﻿@model Lab3.ViewModels.SlideAndSlideWithListsViewModel
 @{
     ViewBag.Title = "Chapter1";
     Layout = "~/Views/Shared/_TopicItemsAndDiagram.cshtml";
@@ -10,7 +10,16 @@
         Chapter summary
     </span>
     <ul class="chapter-Summary">
-        <li>
+        
+        @foreach (var listItem in Model.PageWithList.ListItems)
+        {
+            <li>
+                <p>
+                    @Html.Raw(listItem)
+                </p>
+            </li>
+        }
+        @*<li>
             <p>
                 The Polish outbound market is forecasted to account for 19.9
                 million trips abroad with at least one overnight stay by 2020.
@@ -48,7 +57,7 @@
                 90% of departing Polish visitors are either ‘Very’ or ‘Extremely’
                 likely to recommend Britain for a holiday or short-break.
             </p>
-        </li>
+        </li>*@
     </ul>
     <span class="source-Font">
         Source: International Passenger Survey by ONS, Oxford Economics (overnight trips), UNWTO, CAA 2016 (asked to leisure visitors)

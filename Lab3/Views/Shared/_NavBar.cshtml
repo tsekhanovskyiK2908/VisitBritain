@@ -1,14 +1,27 @@
-﻿@*@model Lab3.Models.Slide*@
+﻿@model Lab3.ViewModels.SlideAndSlideWithListsViewModel
 
 <nav class="links-To-Nearest-Pages">
     @try
     {
-        foreach (var link in Model.Links)
+        if (Model.PageWithList == null)
         {
-            <a href="/@link.ControllerName/@link.ActionName">
-                <p>@link.LinkText</p>
-            </a>
+            foreach (var link in Model.Slide.Links)
+            {
+                <a href="/@link.ControllerName/@link.ActionName">
+                    <p>@link.LinkText</p>
+                </a>
+            }
         }
+        else
+        {
+            foreach (var link in Model.PageWithList.Slide.Links)
+            {
+                <a href="/@link.ControllerName/@link.ActionName">
+                    <p>@link.LinkText</p>
+                </a>
+            }
+        }
+
     }
     catch
     {

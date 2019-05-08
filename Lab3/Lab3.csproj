@@ -297,6 +297,8 @@
     <Compile Include="ViewModels\CityDetailsViewModel.cs" />
     <Compile Include="ViewModels\CityFormViewModel.cs" />
     <Compile Include="ViewModels\OrderFormViewModel.cs" />
+    <Compile Include="ViewModels\PageWithListViewModel.cs" />
+    <Compile Include="ViewModels\SlideAndSlideWithListsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -419,6 +421,8 @@
     <Content Include="Views\Orders\IndexForAdmin.cshtml" />
     <Content Include="Views\Orders\OrderForm.cshtml" />
     <Content Include="Views\Cities\Details.cshtml" />
+    <Content Include="Views\Shared\_PageWithList.cshtml" />
+    <Content Include="Views\Shared\_NavBarUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

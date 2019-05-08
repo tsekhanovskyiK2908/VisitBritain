@@ -1,16 +1,36 @@
-﻿@model Lab3.Models.Slide
+﻿@model Lab3.ViewModels.SlideAndSlideWithListsViewModel
 
-@{
-    ViewBag.Title = Model.Name;    
+@{  
+    if(Model.Slide!=null)
+    {
+        ViewBag.Title = Model.Slide.Name;
+    }
+    else
+    {
+        ViewBag.Title = Model.PageWithList.Slide.Name;
+    }
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @{ 
-    var classNameOfDiv = (Model.Name == "Overview" || Model.Name == "Chapter 1: Inbound market statistics" || Model.Name == "Chapter 1.1: Key statistics") ? "slide-Block overview-Slide-Color" : (Model.Name=="Content") ? "slide-Block content-Slide" : "slide-Block";
-    var classNameofSpan = (Model.Name == "Content") ? "slide-Title slide-Title-Content" : "slide-Title";
+    string classNameOfDiv;
+    string classNameOfSpan;
+    string name;
+    if(Model.Slide!=null && Model.Slide.Number==3)
+    {
+        classNameOfDiv = "slide-Block content-Slide";
+        classNameOfSpan = "slide-Title slide-Title-Content";
+        name = Model.Slide.Name;
+    }
+    else
+    {
+        classNameOfDiv = "slide-Block";
+        classNameOfSpan = "slide-Title";
+        name = Model.PageWithList.Slide.Name;
+    }
 }
 
 <div class="@classNameOfDiv">
-    <span class="@classNameofSpan">@Model.Name</span>
+    <span class="@classNameOfSpan">@name</span>
     @RenderBody()
 </div>
